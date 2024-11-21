@@ -1,0 +1,28 @@
+{
+  "name": "@anchan828/esbuild",
+  "version": "0.0.0",
+  "description": "Helper functions for esbuild",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  },
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc -b --clean && tsc && tsx build.ts"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "glob": "^11.0.0"
+  }
+}

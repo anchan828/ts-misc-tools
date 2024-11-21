@@ -1,0 +1,17 @@
+# nodejs
+node_modules
+
+# dist
+dist
+
+# turbo
+.turbo
+
+# vitest
+coverage
+
+# tsc
+.tsbuildInfo
+
+# tsup: It seems that sometimes intermediate files are left behind when a build error occurs.
+tsup.config.bundled*

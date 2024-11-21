@@ -1,0 +1,30 @@
+{
+  "name": "@anchan828/tsup",
+  "version": "0.0.0",
+  "description": "Helper functions for tsup",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  },
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc -b --clean && tsc && tsx build.ts"
+  },
+  "dependencies": {
+    "tsup": "^8.3.5"
+  },
+  "devDependencies": {
+    "@anchan828/esbuild": "0.0.0"
+  }
+}
